@@ -1,5 +1,13 @@
 <?php
 
+// URL: http://pl.php.net/manual/pl/timezones.php
+// HINT: in case of setting a proper timezone for the country in which we'll use the application
+date_default_timezone_set('Europe/Warsaw');
+
+// URL: http://stackoverflow.com/questions/4279282/set-http-header-to-utf-8-using-php
+// HINT: in case of lack of Polish chars
+header('Content-Type: text/html; charset=utf-8');
+
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
@@ -33,7 +41,7 @@ if (defined('ENVIRONMENT'))
 	switch (ENVIRONMENT)
 	{
 		case 'development':
-			error_reporting(E_ALL);
+			error_reporting(E_ALL | E_STRICT);
 		break;
 
 		case 'testing':
