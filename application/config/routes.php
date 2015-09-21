@@ -38,9 +38,14 @@
 |
 */
 
-$route['default_controller'] = "welcome";
+$route['default_controller'] = "blog";
 $route['404_override'] = '';
 
+// Ustawianie domyślnego kontrolera dla folderu 'admin'
+$route['admin'] = "admin/panel";
+
+$route['page/(:any)'] = "page/display_page/$1";
+$route['article/(:any)'] = "article/display_article/$1";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

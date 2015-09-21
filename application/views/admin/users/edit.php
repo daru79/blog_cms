@@ -7,11 +7,11 @@
 <table>
     <tr>
         <td>Imię</td>
-        <td><?php print form_input('name'); ?></td>
+        <td><?php print form_input('name', set_value('value', $user->name)); ?></td>
     </tr>
     <tr>
         <td>Email</td>
-        <td><?php print form_input('email'); ?></td>
+        <td><?php print form_input('email', set_value('value', $user->email)); ?></td>
     </tr>
     <tr>
         <td>Hasło</td>
@@ -23,7 +23,7 @@
     </tr>
     <tr>
         <td></td>
-        <td><?php print form_submit('submit', 'Dodaj użytkownika'); ?></td>
+        <td><?php print form_submit('submit', 'Edytuj użytkownika'); ?></td>
     </tr>
 </table>
 
